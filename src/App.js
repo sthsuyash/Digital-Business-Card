@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import mainImage from './images/laura.png';
+import Title from './components/Title.mjs';
+import About from './components/About.mjs';
+import Interests from './components/Interests.mjs';
+import Footer from './components/Footer.mjs';
+
+import './components/styles.scss';
+
+export default function App() {
+    return (
+        <main>
+            <img className='portrait' src={mainImage} alt="main" />
+            <section className='notPic'>
+                <Title />
+                <About />
+                <Interests />
+            </section>
+            <Footer />
+        </main>
+    )
 }
-
-export default App;
